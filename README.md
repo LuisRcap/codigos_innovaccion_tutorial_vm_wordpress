@@ -38,6 +38,16 @@ Producción II
 **Con este comando abres el puerto 80 que es necesario para que se mustre la página**
 
     az vm open-port --port 80 --resource-group NOMBRE_GRUPO_DE_RECURSOS --name NOMBRE_MAQUINA_VIRTUAL
+    
+    
+**Es importante que en este apartado se haga la conexión en el grupo de recursos de red para poder visualizar la página en línea**
+
+    Para esto te debes dirigir al grupo de recursos en tu portal de azure, identificar el grupo de recursos que se creó al principio y entrar ahí.
+    Una vez que se accede, identifica el recurso de la máquina virtual y das click.
+    En las pestañas de la parte superior del recurso en el apartado de información general, identifica la pestaña que dice "conectar" y selecciona SSH
+    luego indica el SSH que se usa para poner la ip pública "azureuser@TU_DIRECCION_IP" en la parte de Ruta de acceso de clave privada.
+    Copia el código que se genera en el punto 4 y ejecutalo en el bash y de esta forma será accesible desde la segunda dirección ip que te denera
+    ssh -i <ruta de acceso de clave privada> azureuser@<ruta de acceso para el navegador>
 
 **Con este comando accedes a la máquina virtual**
 
